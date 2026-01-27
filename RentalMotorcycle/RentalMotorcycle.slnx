@@ -1,0 +1,7 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/RentalMotorcycle.Domain.Core/RentalMotorcycle.Domain.Core.csproj" />
+    <Project Path="src/RentalMotorcycle.Domain/RentalMotorcycle.Domain.csproj" />
+  </Folder>
+  <Folder Name="/tests/" />
+</Solution>
