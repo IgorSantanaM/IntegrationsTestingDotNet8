@@ -2,13 +2,10 @@
 using RentalMotorcycle.Domain.Core.Data;
 using RentalMotorcycle.Domain.Core.Models;
 using RentalMotorcycle.Infra.Data.Contexts;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace RentalMotorcycle.Infra.Data.Repositories
 {
-    public class Repository<TEntity, TId> : IRepository<TEntity, TId> 
+    public class Repository<TEntity, TId> : IRepository<TEntity, TId>
         where TEntity : class, IAggregateRoot
         where TId : notnull
     {
@@ -18,7 +15,7 @@ namespace RentalMotorcycle.Infra.Data.Repositories
         public Repository(RentalMotorcycleContext context)
         {
             _context = context ?? throw new ArgumentNullException(nameof(context));
-            _dbSet = _context.Set<TEntity>(); 
+            _dbSet = _context.Set<TEntity>();
         }
         public async Task AddAsync(TEntity entity)
         {

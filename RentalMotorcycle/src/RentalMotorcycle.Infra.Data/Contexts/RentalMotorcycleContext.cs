@@ -6,7 +6,7 @@ using RentalMotorcycle.Domain.Rentals;
 
 namespace RentalMotorcycle.Infra.Data.Contexts
 {
-    public class RentalMotorcycleContext : DbContext
+    public class RentalMotorcycleContext(DbContextOptions<RentalMotorcycleContext> options) : DbContext(options)
     {
         public DbSet<Motorcycle> Motorcycles { get; set; }
         public DbSet<Driver> Drivers { get; set; }
