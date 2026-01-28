@@ -12,9 +12,11 @@
   <Folder Name="/src/4. Infra/4.1 Data/">
     <Project Path="src/RentalMotorcycle.Infra.Data/RentalMotorcycle.Infra.Data.csproj" Id="0b6bbc01-3c14-4be7-9c90-ec2aa308a96c" />
   </Folder>
-  <Folder Name="/src/4. Infra/4.2 CrossCutting/">
+  <Folder Name="/src/4. Infra/4.2 Messaging/">
+    <Project Path="src/RentalMotorcycle.Infra.Messaging/RentalMotorcycle.Infra.Messaging.csproj" Id="c36241df-5c8a-4946-90dd-fc2ef925a09b" />
+  </Folder>
+  <Folder Name="/src/4. Infra/4.3 CrossCutting/">
     <Project Path="src/RentalMotorcycle.Infra.CrossCutting.IoC/RentalMotorcycle.Infra.CrossCutting.IoC.csproj" Id="8bde15be-aa75-4116-a2f4-a904c3e2294d" />
   </Folder>
-  <Folder Name="/src/4. Infra/4.3 Services/" />
   <Folder Name="/tests/" />
 </Solution>
