@@ -19,20 +19,20 @@ namespace RentalMotorcycle.Infra.Data.Mappings
 
             builder.Property(d => d.CNPJ)
                 .IsRequired()
-                .HasMaxLength(14) 
-                .IsFixedLength(); 
+                .HasMaxLength(14)
+                .IsFixedLength();
 
             builder.Property(d => d.CNHNumber)
                 .IsRequired()
-                .HasMaxLength(11) 
+                .HasMaxLength(11)
                 .IsFixedLength();
 
             builder.Property(d => d.CNHType)
                 .IsRequired()
-                .HasMaxLength(5); 
+                .HasMaxLength(5);
 
             builder.Property(d => d.CNHImageUrl)
-                .IsRequired(false) 
+                .IsRequired(false)
                 .HasMaxLength(500);
 
             builder.Property(d => d.BirthDate)

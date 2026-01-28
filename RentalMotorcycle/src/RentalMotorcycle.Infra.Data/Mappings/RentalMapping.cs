@@ -4,9 +4,6 @@ using RentalMotorcycle.Domain.Drivers;
 using RentalMotorcycle.Domain.Motorcycles;
 using RentalMotorcycle.Domain.Rentals;
 using RentalMotorcycle.Infra.Data.Extensions;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace RentalMotorcycle.Infra.Data.Mappings
 {
