@@ -7,7 +7,6 @@ namespace RentalMotorcycle.Domain.Core.Data
         Task AddAsync(TEntity entity);
         Task UpdateAsync(TEntity entity);
         Task DeleteAsync(TEntity entity);
-        Task<IEnumerable<TEntity>> GetAllAsync();
         Task<TEntity?> GetByIdAsync(TId id);
     }
 }

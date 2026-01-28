@@ -1,7 +1,16 @@
 <Solution>
-  <Folder Name="/src/">
+  <Folder Name="/src/" />
+  <Folder Name="/src/1. Presentation/" />
+  <Folder Name="/src/2. Application/" />
+  <Folder Name="/src/3. Domain/">
     <Project Path="src/RentalMotorcycle.Domain.Core/RentalMotorcycle.Domain.Core.csproj" />
     <Project Path="src/RentalMotorcycle.Domain/RentalMotorcycle.Domain.csproj" />
   </Folder>
+  <Folder Name="/src/4. Infra/" />
+  <Folder Name="/src/4. Infra/4.1 Data/">
+    <Project Path="src/RentalMotorcycle.Infra.Data/RentalMotorcycle.Infra.Data.csproj" Id="0b6bbc01-3c14-4be7-9c90-ec2aa308a96c" />
+  </Folder>
+  <Folder Name="/src/4. Infra/4.2 CrossCutting/" />
+  <Folder Name="/src/4. Infra/4.3 Services/" />
   <Folder Name="/tests/" />
 </Solution>
