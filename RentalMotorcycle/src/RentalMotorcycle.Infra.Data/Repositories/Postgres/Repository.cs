@@ -3,7 +3,7 @@ using RentalMotorcycle.Domain.Core.Data;
 using RentalMotorcycle.Domain.Core.Models;
 using RentalMotorcycle.Infra.Data.Contexts;
 
-namespace RentalMotorcycle.Infra.Data.Repositories
+namespace RentalMotorcycle.Infra.Data.Repositories.Postgres
 {
     public class Repository<TEntity, TId> : IRepository<TEntity, TId>
         where TEntity : class, IAggregateRoot

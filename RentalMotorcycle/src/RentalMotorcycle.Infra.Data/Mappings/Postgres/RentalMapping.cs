@@ -5,7 +5,7 @@ using RentalMotorcycle.Domain.Motorcycles;
 using RentalMotorcycle.Domain.Rentals;
 using RentalMotorcycle.Infra.Data.Extensions;
 
-namespace RentalMotorcycle.Infra.Data.Mappings
+namespace RentalMotorcycle.Infra.Data.Mappings.Postgres
 {
     public class RentalMapping : EntityTypeConfiguration<Rental>
     {

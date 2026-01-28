@@ -1,6 +1,9 @@
-﻿namespace RentalMotorcycle.Domain.Core.Models
+﻿
+using MediatR;
+
+namespace RentalMotorcycle.Domain.Core.Models
 {
-    public abstract record Event<TId> : Message<TId> where TId : notnull
+    public abstract record Event<TId> : Message<TId>, INotification where TId : notnull
     {
         public DateTime TimeStamp { get; set; }
 

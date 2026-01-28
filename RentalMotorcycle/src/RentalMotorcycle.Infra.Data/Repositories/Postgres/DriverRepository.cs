@@ -2,7 +2,7 @@
 using RentalMotorcycle.Domain.Drivers;
 using RentalMotorcycle.Infra.Data.Contexts;
 
-namespace RentalMotorcycle.Infra.Data.Repositories
+namespace RentalMotorcycle.Infra.Data.Repositories.Postgres
 {
     public class DriverRepository(RentalMotorcycleContext context) : Repository<Driver, Guid>(context), IDriverRepository
     {

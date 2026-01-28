@@ -7,10 +7,7 @@ namespace RentalMotorcycle.Infra.Data.Interceptors
 {
     public class PublishDomainEventsInterceptor(IPublisher mediator) : SaveChangesInterceptor
     {
-        public override async ValueTask<InterceptionResult<int>> SavingChangesAsync(
-            DbContextEventData eventData,
-            InterceptionResult<int> result,
-            CancellationToken cancellationToken = default)
+        public override async ValueTask<InterceptionResult<int>> SavingChangesAsync(DbContextEventData eventData, InterceptionResult<int> result, CancellationToken cancellationToken = default)
         {
             await PublishDomainEvents(eventData.Context);
             return await base.SavingChangesAsync(eventData, result, cancellationToken);
