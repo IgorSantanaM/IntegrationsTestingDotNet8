@@ -27,12 +27,12 @@ namespace RentalMotorcycle.Domain.Motorcycles
             if (string.IsNullOrWhiteSpace(licensePlate))
                 throw new DomainException("The license plate cannot be empty.");
 
-            if (year <= 1885 || year > DateTime.UtcNow.Year)
+            if (year <= 1885 || year > (DateTime.UtcNow.Year + 1))
                 throw new DomainException("The year of the motorcycle must be in valid range.");
 
             Year = year;
             Model = model;
-            LicensePlate = licensePlate;
+            LicensePlate = licensePlate.ToUpper().Trim();
 
             var motorcycleCreatedEvent = new MotorcycleCreated(Id, Year, Model, LicensePlate);
             AddDomainEvent(motorcycleCreatedEvent);

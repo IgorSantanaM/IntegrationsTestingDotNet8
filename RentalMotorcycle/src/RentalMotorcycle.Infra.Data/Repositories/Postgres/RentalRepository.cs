@@ -2,7 +2,7 @@
 using RentalMotorcycle.Domain.Rentals;
 using RentalMotorcycle.Infra.Data.Contexts;
 
-namespace RentalMotorcycle.Infra.Data.Repositories
+namespace RentalMotorcycle.Infra.Data.Repositories.Postgres
 {
     public class RentalRepository(RentalMotorcycleContext context)
         : Repository<Rental, Guid>(context),

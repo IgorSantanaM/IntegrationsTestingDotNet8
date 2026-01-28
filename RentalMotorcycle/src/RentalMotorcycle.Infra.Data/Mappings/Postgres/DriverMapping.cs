@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using RentalMotorcycle.Domain.Drivers;
 using RentalMotorcycle.Infra.Data.Extensions;
 
-namespace RentalMotorcycle.Infra.Data.Mappings
+namespace RentalMotorcycle.Infra.Data.Mappings.Postgres
 {
     public class DriverMapping : EntityTypeConfiguration<Driver>
     {
