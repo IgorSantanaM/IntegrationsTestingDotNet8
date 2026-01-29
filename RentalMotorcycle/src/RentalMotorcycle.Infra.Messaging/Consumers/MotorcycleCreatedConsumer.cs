@@ -9,7 +9,6 @@ namespace RentalMotorcycle.Infra.Messaging.Consumers
     {
         public async Task Consume(ConsumeContext<MotorcycleCreated> context)
         {
-
             var message = context.Message;
 
             if (message.Year != 2024)
@@ -26,7 +25,6 @@ namespace RentalMotorcycle.Infra.Messaging.Consumers
                 message.Year,
                 message.Model,
                 message.LicensePlate);
-
 
             await repository.AddAsync(motorcycleNotification, context.CancellationToken);
         }

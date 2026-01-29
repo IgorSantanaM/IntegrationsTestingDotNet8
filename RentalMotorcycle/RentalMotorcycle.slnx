@@ -1,6 +1,8 @@
 <Solution>
   <Folder Name="/src/" />
-  <Folder Name="/src/1. Presentation/" />
+  <Folder Name="/src/1. Presentation/">
+    <Project Path="src/RentalMotorcycle.Presentation.WebAPI/RentalMotorcycle.Presentation.WebAPI.csproj" Id="373ac5cc-9f65-4b03-895c-e49f381056ba" />
+  </Folder>
   <Folder Name="/src/2. Application/">
     <Project Path="src/RentalMotorcycle.Application/RentalMotorcycle.Application.csproj" Id="1ee5ff3a-f223-4da5-86f4-c627ab92fda1" />
   </Folder>
@@ -19,4 +21,7 @@
     <Project Path="src/RentalMotorcycle.Infra.CrossCutting.IoC/RentalMotorcycle.Infra.CrossCutting.IoC.csproj" Id="8bde15be-aa75-4116-a2f4-a904c3e2294d" />
   </Folder>
   <Folder Name="/tests/" />
+  <Project Path="docker-compose.dcproj">
+    <Build />
+  </Project>
 </Solution>

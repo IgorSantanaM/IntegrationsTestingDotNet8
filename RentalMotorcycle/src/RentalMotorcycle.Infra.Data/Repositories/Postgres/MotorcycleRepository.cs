@@ -15,7 +15,7 @@ namespace RentalMotorcycle.Infra.Data.Repositories.Postgres
                 .AnyAsync(m => EF.Functions.ILike(m.LicensePlate, licensePlate), token);
         }
 
-        public async Task<IEnumerable<Motorcycle>> GetAllAsync(string? licensePlateFilter = null, CancellationToken token = default)
+        public async Task<IEnumerable<Motorcycle>?> GetAllAsync(string? licensePlateFilter = null, CancellationToken token = default)
         {
             var query = context.Motorcycles.AsNoTracking();
 
