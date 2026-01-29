@@ -7,13 +7,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.1" />
     <PackageReference Include="MassTransit.RabbitMQ" Version="9.0.0" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="10.0.2" />
     <PackageReference Include="MongoDB.Driver" Version="3.6.0" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\RentalMotorcycle.Application\RentalMotorcycle.Application.csproj" />
     <ProjectReference Include="..\RentalMotorcycle.Infra.Data\RentalMotorcycle.Infra.Data.csproj" />
+    <ProjectReference Include="..\RentalMotorcycle.Infra.Messaging\RentalMotorcycle.Infra.Messaging.csproj" />
   </ItemGroup>
 
 </Project>
