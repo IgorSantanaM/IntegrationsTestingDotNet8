@@ -7,13 +7,17 @@ namespace RentalMotorcycle.Infra.Data.Interceptors
 {
     public class PublishDomainEventsInterceptor(IPublisher mediator) : SaveChangesInterceptor
     {
-        public override async ValueTask<InterceptionResult<int>> SavingChangesAsync(DbContextEventData eventData, InterceptionResult<int> result, CancellationToken cancellationToken = default)
+        public override async ValueTask<InterceptionResult<int>> SavingChangesAsync(
+            DbContextEventData eventData, 
+            InterceptionResult<int> result, 
+            CancellationToken cancellationToken = default)
         {
-            await PublishDomainEvents(eventData.Context);
+            await CollectAndPublishDomainEvents(eventData.Context);
+            
             return await base.SavingChangesAsync(eventData, result, cancellationToken);
         }
 
-        private async Task PublishDomainEvents(DbContext? context)
+        private async Task CollectAndPublishDomainEvents(DbContext? context)
         {
             if (context == null) return;
 
@@ -23,7 +27,7 @@ namespace RentalMotorcycle.Infra.Data.Interceptors
                 .Select(e => e.Entity)
                 .ToList();
 
-            if (!entitiesWithEvents.Any()) return;
+            if (entitiesWithEvents.Count == 0) return;
 
             var domainEvents = entitiesWithEvents
                 .SelectMany(e => e.DomainEvents)

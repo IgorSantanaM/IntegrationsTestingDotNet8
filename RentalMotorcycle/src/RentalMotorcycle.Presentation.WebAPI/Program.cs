@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using RentalMotorcycle.Infra.CrossCutting.IoC;
 using RentalMotorcycle.Infra.Data.Contexts;
 using RentalMotorcycle.Presentation.WebAPI.Endpoints.Internal;
+using RentalMotorcycle.Presentation.WebAPI.Middlewares;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -52,6 +53,8 @@ using (var scope = app.Services.CreateScope())
 }
 
 app.UseCors();
+
+app.UseMiddleware<ErrorHandlingMiddleware>();
 
 app.UseEndpoints<Program>();
 
